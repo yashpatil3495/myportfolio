@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Lost in the Void | Yash Patil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/404.css">
+</head>
+<body>
+
+<canvas id="glitch-canvas"></canvas>
+
+<div class="breadcrumb">
+  <a href="/">yashpatil3495.github.io</a>
+  <span class="breadcrumb-sep">/</span>
+  <span style="color:var(--rust);">404</span>
+</div>
+
+<div class="status-chip">
+  <span class="status-dot"></span>
+  Error 0x404
+</div>
+
+<div class="content">
+
+  <div class="four-o-four">404</div>
+
+  <div class="error-label">
+    Exception: <span class="code">PageNotFoundException</span>
+  </div>
+
+  <h1>Lost in the <em>void</em>,<br>but not for long.</h1>
+
+  <p class="sub-text">
+    The page you're looking for dissolved into the pixel dust.<br>
+    Let's get you back somewhere real.
+  </p>
+
+  <div class="cta-row">
+    <a href="/" class="btn btn-primary">← Back to Portfolio</a>
+    <a href="/resume.html" class="btn btn-ghost">View Resume ↗</a>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="quick-nav-label">Quick navigation</div>
+  <div class="suggestions">
+    <a href="/#work"      class="suggestion-link">Projects</a>
+    <a href="/#about"     class="suggestion-link">About</a>
+    <a href="/#education" class="suggestion-link">Education</a>
+    <a href="/#contact"   class="suggestion-link">Contact</a>
+    <a href="https://github.com/yashpatil3495" target="_blank" rel="noopener" class="suggestion-link">GitHub ↗</a>
+  </div>
+
+  <div class="auto-redirect">
+    Auto-redirecting in <span class="countdown-num" id="countdown">10</span>s
+    <div class="redirect-bar"><div class="redirect-fill"></div></div>
+  </div>
+
+</div>
+
+<script src="js/404.js"></script>
+<script>
+  // Countdown redirect
+  let t = 10;
+  const el = document.getElementById('countdown');
+  const iv = setInterval(() => {
+    t--;
+    if (el) el.textContent = t;
+    if (t <= 0) { clearInterval(iv); window.location.href = '/'; }
+  }, 1000);
+
+  // Subtle particle canvas
+  const cv = document.getElementById('glitch-canvas');
+  const ctx = cv.getContext('2d');
+  let W, H, particles = [];
+  function resize() {
+    W = cv.width = window.innerWidth;
+    H = cv.height = window.innerHeight;
+  }
+  resize(); window.addEventListener('resize', resize);
+  for (let i = 0; i < 60; i++) {
+    particles.push({
+      x: Math.random() * 1920, y: Math.random() * 1080,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: (Math.random() - 0.5) * 0.3,
+      r: Math.random() * 1.5 + 0.5,
+      a: Math.random()
+    });
+  }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(p => {
+      p.x += p.vx; p.y += p.vy;
+      p.a += 0.008;
+      if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
+      if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
+      const alpha = (Math.sin(p.a) * 0.5 + 0.5) * 0.6;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(232,168,50,${alpha})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+</script>
+
+</body>
+</html>

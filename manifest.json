@@ -1,0 +1,35 @@
+{
+  "name": "Yash Patil — Frontend Developer & Designer",
+  "short_name": "Yash Patil",
+  "description": "Portfolio of Yash Patil — Frontend Developer & UI/UX Designer based in Pune, India.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c0a06",
+  "theme_color": "#0c0a06",
+  "lang": "en",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='36' fill='%230c0a06'/><text y='142' x='96' text-anchor='middle' font-size='112' font-family='serif' font-weight='bold' fill='%23e8a832'>Y</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='96' fill='%230c0a06'/><text y='380' x='256' text-anchor='middle' font-size='300' font-family='serif' font-weight='bold' fill='%23e8a832'>Y</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "label": "Yash Patil Portfolio"
+    }
+  ],
+  "categories": ["portfolio", "design", "development"],
+  "orientation": "portrait-primary"
+}

@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="view-transition" content="same-origin">
+<meta name="description" content="Yash Patil — Frontend Developer & UI/UX Designer. Building responsive web apps, AI-powered tools, and immersive digital experiences. Open to work.">
+<meta name="keywords" content="Yash Patil, Frontend Developer, Web Developer, UI UX Designer, HTML CSS JavaScript, Portfolio, Pune">
+<meta name="author" content="Yash Patil">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0c0a06">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yash Patil | Frontend Developer & Designer">
+<meta property="og:description" content="Building responsive web apps, AI-powered tools, and immersive digital experiences. Open to work — full-time, freelance, or internships.">
+<meta property="og:image" content="https://yashpatil3495.github.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://yashpatil3495.github.io/">
+<meta property="og:site_name" content="Yash Patil Portfolio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@yashpatil3495">
+<meta name="twitter:title" content="Yash Patil | Frontend Developer">
+<meta name="twitter:description" content="Frontend Developer & UI/UX Designer building immersive web experiences.">
+<meta name="twitter:image" content="https://yashpatil3495.github.io/assets/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230c0a06'/><text y='72' x='50' text-anchor='middle' font-size='58' font-family='serif' font-weight='bold' fill='%23e8a832'>Y</text></svg>">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<!-- Critical: DM Mono only (UI labels, code) — blocks render intentionally -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Non-critical display fonts: load async so they never block paint -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=optional" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap"></noscript>
+<link rel="canonical" href="https://yashpatil3495.github.io/">
+<link rel="manifest" href="manifest.json">
+<title>Yash Patil | Frontend Developer & Designer</title>
+
+<!-- JSON-LD Structured Data for rich search results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Yash Patil",
+  "jobTitle": "Frontend Developer & UI/UX Designer",
+  "url": "https://yashpatil3495.github.io/",
+  "email": "yashpatil3495@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Pune", "addressCountry": "IN" },
+  "sameAs": [
+    "https://github.com/yashpatil3495",
+    "https://www.linkedin.com/in/yash-patil-b30b18363",
+    "https://dev.to/yashpatil3495"
+  ],
+  "openToWork": true,
+  "knowsAbout": ["HTML5","CSS3","JavaScript","React","Three.js","Node.js","UI/UX Design","Figma","Python","Java","C","C++","Generative AI","Prompt Engineering","Responsive Design"]
+}
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- SKIP TO CONTENT — Accessibility for keyboard users -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div id="scroll-progress" role="progressbar" aria-label="Page scroll progress"></div>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<div id="cursor-label"></div>
+<div class="stripe-bar"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<!-- LOADER -->
+<div id="loader">
+  <canvas id="loader-canvas" width="160" height="160"></canvas>
+  <div class="loader-title" id="loader-name"></div>
+  <div class="loader-bar-wrap">
+    <div class="loader-fill" id="loader-fill" style="width:0%"></div>
+  </div>
+  <div class="loader-pct" id="loader-pct">0%</div>
+</div>
+
+<!-- MAIN THREE.JS CANVAS -->
+<canvas id="canvas-bg"></canvas>
+
+<!-- NAV -->
+<nav id="main-nav" role="navigation" aria-label="Main navigation">
+  <a href="#" class="nav-logo magnetic" data-label="Home" aria-label="Yash Patil — Home">YP<span>.</span></a>
+  <ul class="nav-links" role="list">
+    <li><a href="#work" class="magnetic" data-label="Work" aria-label="Go to Work section">Work</a></li>
+    <li><a href="#about" class="magnetic" data-label="About" aria-label="Go to About section">About</a></li>
+    <li><a href="#education" class="magnetic" data-label="Education" aria-label="Go to Education section">Education</a></li>
+    <li><a href="#contact" class="magnetic" data-label="Contact" aria-label="Go to Contact section">Contact</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <a href="resume.html" class="nav-resume-btn magnetic" data-label="Resume" aria-label="View Dynamic Resume">Resume ↗</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div id="mobile-nav">
+  <a href="#work" class="mobile-link">Work</a>
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#education" class="mobile-link">Education</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+  <a href="resume.html" class="mobile-link" style="color:var(--amber);border-top:1px solid var(--border);margin-top:8px;padding-top:16px;">↗ View Resume</a>
+</div>
+
+<!-- MAIN CONTENT LANDMARK -->
+<main id="main-content" tabindex="-1">
+
+<!-- HERO -->
+<section class="hero" id="hero-section" aria-label="Introduction">
+  <div class="hero-inner" id="hero-parallax">
+    <div class="hero-badge" data-parallax="0.05"><span class="dot"></span>Open to Work &mdash; Full-time · Freelance · Internships &nbsp;·&nbsp; Pune, India</div>
+    <h1 class="hero-name" data-parallax="0.02">
+      Yash<br><span class="accent">Patil</span><span class="accent2">.</span>
+    </h1>
+    <p class="hero-tagline" data-parallax="0.04"><span id="typed-text">Frontend Developer</span><span class="typing-cursor"></span></p>
+    <div class="hero-ctas" data-parallax="0.08">
+      <a href="#work" class="btn-primary magnetic" data-label="View Work">View My Work</a>
+      <a href="#contact" class="btn-ghost magnetic" data-label="Say Hello">Get In Touch</a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- TECH MARQUEE STRIP -->
+<div class="marquee-strip">
+  <div class="marquee-track" id="marquee-track">
+    <span class="marquee-item"><span class="marquee-dot"></span>HTML5</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>CSS3</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>JavaScript</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>React</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Three.js</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Node.js</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Python</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Java</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>C++</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>UI/UX Design</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Prompt Engineering</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Generative AI</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Web APIs</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Figma</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Git</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Responsive Design</span>
+    <!-- Duplicate for seamless loop -->
+    <span class="marquee-item"><span class="marquee-dot"></span>HTML5</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>CSS3</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>JavaScript</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>React</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Three.js</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Node.js</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Python</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Java</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>C++</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>UI/UX Design</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Prompt Engineering</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Generative AI</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Web APIs</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Figma</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Git</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Responsive Design</span>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+
+
+
+<!-- SERVICES -->
+<section class="section-outer">
+<div class="services section-box" style="max-width:1240px;margin:0 auto;">
+  <div class="section-label">What I Do</div>
+  <h2 class="section-title split-title">My <em>Services</em></h2>
+  <div class="services-grid">
+    <div class="service-card reveal spotlight-card">
+      <span class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="32" height="32" aria-hidden="true">
+          <rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/><line x1="2" y1="20" x2="22" y2="20"/>
+        </svg>
+      </span>
+      <h3>Web Development</h3>
+      <p>Building responsive, fast, and SEO-friendly websites using HTML, CSS, and JavaScript with modern best practices.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-1 spotlight-card">
+      <span class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="32" height="32" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
+        </svg>
+      </span>
+      <h3>UI/UX Design</h3>
+      <p>Designing intuitive user interfaces and clean layouts that enhance user experience and drive engagement.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-2 spotlight-card">
+      <span class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="32" height="32" aria-hidden="true">
+          <path d="M12 2a9 9 0 0 1 9 9c0 3.6-2.1 6.7-5.1 8.2L15 21H9l-.9-1.8A9.9 9.9 0 0 1 3 11a9 9 0 0 1 9-9z"/><line x1="9" y1="15" x2="9" y2="9"/><line x1="15" y1="15" x2="15" y2="9"/><line x1="9" y1="12" x2="15" y2="12"/>
+        </svg>
+      </span>
+      <h3>AI Integration</h3>
+      <p>Leveraging LLMs and Prompt Engineering to build smarter, more powerful web solutions and automation tools.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-1 spotlight-card">
+      <span class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="32" height="32" aria-hidden="true">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        </svg>
+      </span>
+      <h3>Performance Audits</h3>
+      <p>Analysing and optimising web apps for speed, accessibility, and Core Web Vitals — measurable improvements, not guesses.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-2 spotlight-card">
+      <span class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="32" height="32" aria-hidden="true">
+          <rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/>
+        </svg>
+      </span>
+      <h3>Component Libraries</h3>
+      <p>Building reusable, accessible UI component systems in React or vanilla JS — consistent design at any scale.</p>
+    </div>
+  </div>
+  <div class="section-ask-row reveal">
+    <span class="section-ask-label">✦ Ask AI</span>
+    <button class="section-ask-chip" data-q="What services does Yash offer?">What services does Yash offer?</button>
+    <button class="section-ask-chip" data-q="Can Yash build an AI-powered web app?">Can Yash build an AI-powered app?</button>
+    <button class="section-ask-chip" data-q="What's Yash's design process?">What's his design process?</button>
+  </div>
+</div><!-- /.services section-box -->
+</section><!-- /.section-outer services -->
+
+<div class="divider"></div>
+
+<!-- WORKFLOW -->
+<section class="section-outer">
+<div class="workflow section-box" style="max-width:1240px;margin:0 auto;">
+  <div class="section-label">Process</div>
+  <h2 class="section-title split-title">My <em>Workflow</em></h2>
+  <p class="section-sub">From concept to deployment, here's how I bring ideas to life.</p>
+  <div class="workflow-grid">
+    <div class="workflow-step reveal spotlight-card">
+      <div class="step-number">01</div>
+      <div class="step-icon">🔍</div>
+      <h3>Discover</h3>
+      <p>Understanding the problem, researching requirements, and planning the architecture before writing a single line of code.</p>
+    </div>
+    <div class="workflow-step reveal reveal-delay-1 spotlight-card">
+      <div class="step-number">02</div>
+      <div class="step-icon">✏️</div>
+      <h3>Design</h3>
+      <p>Creating wireframes and UI layouts to ensure the experience is intuitive, accessible, and fully responsive.</p>
+    </div>
+    <div class="workflow-step reveal reveal-delay-2 spotlight-card">
+      <div class="step-number">03</div>
+      <div class="step-icon">⚙️</div>
+      <h3>Develop</h3>
+      <p>Writing clean, efficient code using modern technologies like JavaScript, React, Node.js, or plain C/C++.</p>
+    </div>
+    <div class="workflow-step reveal reveal-delay-3 spotlight-card">
+      <div class="step-number">04</div>
+      <div class="step-icon">🚀</div>
+      <h3>Deploy</h3>
+      <p>Testing for bugs, optimizing performance, and launching the project live with continuous improvements.</p>
+    </div>
+  </div>
+</div><!-- /.workflow section-box -->
+</section><!-- /.section-outer workflow -->
+<section id="work" class="section-outer">
+<div class="work section-box" style="max-width:1240px;margin:0 auto;">
+  <div class="section-label">Selected Work</div>
+  <h2 class="section-title split-title">Pro<em>jects</em></h2>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar" id="filter-bar" role="group" aria-label="Filter projects by category">
+    <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+    <button class="filter-btn" data-filter="productivity" aria-pressed="false">Productivity</button>
+    <button class="filter-btn" data-filter="language" aria-pressed="false">Language</button>
+    <button class="filter-btn" data-filter="security" aria-pressed="false">Security</button>
+    <button class="filter-btn" data-filter="creative" aria-pressed="false">Creative</button>
+  </div>
+
+  <div class="project-grid">
+
+    <div class="project-card reveal spotlight-card" data-label="View" data-category="productivity"
+         data-modal='{"emoji":"⏱","gradient":"linear-gradient(135deg,#0e0b04,#1c1408)","category":"01 / Productivity","title":"Focus Flow","problem":"Modern work is full of distractions. Productivity tools are often bland and offer no real motivation system.","solution":"Focus Flow is a gamified productivity dashboard combining a Pomodoro timer, drag-and-drop task management, and Spotify integration. Real-time analytics track your streaks, and a goal system rewards your focus sessions — turning work into a game.","tags":["Spotify Embed","Goal Tracking","Task Management","Data Visualization","Responsive"],"live":"https://yashpatil3495.github.io/timer/","github":"https://github.com/yashpatil3495/timer.git"}'>
+      <div class="card-img-placeholder" style="background: linear-gradient(135deg,#0e0b04,#1c1408);">
+        <canvas class="card-placeholder-canvas" id="card-canvas-1"></canvas>
+        <span class="card-emoji">⏱</span>
+      </div>
+      <div class="card-body">
+        <div class="card-number">01 / PRODUCTIVITY</div>
+        <h3 class="card-title">Focus Flow</h3>
+        <p class="card-desc">A gamified productivity dashboard combining a Pomodoro timer, drag-and-drop task management, and Spotify integration to maximize focus. Features real-time analytics and persistent data tracking.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Spotify Embed</span>
+          <span class="tech-tag">Goal Tracking</span>
+          <span class="tech-tag">Task Management</span>
+          <span class="tech-tag">Data Visualization</span>
+          <span class="tech-tag">Responsive</span>
+        </div>
+        <div class="card-links">
+          <button class="card-link primary magnetic" onclick="openModal(this.closest('.project-card'))" style="border:none;cursor:none;">Expand ↗</button>
+          <a href="https://yashpatil3495.github.io/timer/" target="_blank" rel="noopener noreferrer" class="card-link secondary magnetic" data-label="Open">Live Demo</a>
+          <a href="case-studies/case-study-focus-flow.html" class="card-link secondary magnetic" data-label="Study" style="border-color:rgba(232,168,50,0.2);color:var(--muted);">Case Study →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-delay-1 spotlight-card" data-label="View" data-category="language"
+         data-modal='{"emoji":"🗣","gradient":"linear-gradient(135deg,#060e0d,#0a1c1a)","category":"02 / Language","title":"LinguaVox","problem":"Language barriers on the web are frustrating. Existing tools feel clunky or require switching between multiple apps.","solution":"LinguaVox is a sleek, mobile-first web app with real-time translation, voice input via the Web Speech API, and text-to-speech synthesis. It supports multiple languages with voice matching and adjustable speed control — all in the browser.","tags":["Web Speech API","Fetch API","TTS Synthesis","Speed Control","Voice Match"],"live":"https://yashpatil3495.github.io/LinguaVox2/","github":"https://github.com/yashpatil3495/my-portfolio2.git"}'>
+      <div class="card-img-placeholder" style="background: linear-gradient(135deg,#060e0d,#0a1c1a);">
+        <canvas class="card-placeholder-canvas" id="card-canvas-2"></canvas>
+        <span class="card-emoji">🗣</span>
+      </div>
+      <div class="card-body">
+        <div class="card-number">02 / LANGUAGE</div>
+        <h3 class="card-title">LinguaVox</h3>
+        <p class="card-desc">A mobile-responsive web app with real-time translation, voice input, and text-to-speech synthesis across multiple languages. Seamless voice matching and speed control.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Web Speech API</span>
+          <span class="tech-tag">Fetch API</span>
+          <span class="tech-tag">TTS Synthesis</span>
+          <span class="tech-tag">Speed Control</span>
+          <span class="tech-tag">Voice Match</span>
+        </div>
+        <div class="card-links">
+          <button class="card-link primary magnetic" onclick="openModal(this.closest('.project-card'))" style="border:none;cursor:none;">Expand ↗</button>
+          <a href="https://yashpatil3495.github.io/LinguaVox2/" target="_blank" rel="noopener noreferrer" class="card-link secondary magnetic" data-label="Open">Live Demo</a>
+          <a href="case-studies/case-study-linguavox.html" class="card-link secondary magnetic" data-label="Study" style="border-color:rgba(42,191,179,0.2);color:var(--muted);">Case Study →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-delay-2 spotlight-card" data-label="View" data-category="security"
+         data-modal='{"emoji":"🔐","gradient":"linear-gradient(135deg,#110804,#1e0d06)","category":"03 / Security","title":"Fortress Pro","problem":"Most password generators are boring, insecure, or lack any real feedback on password strength.","solution":"Fortress Pro uses the Crypto API to generate cryptographically secure passwords with a real-time entropy estimation engine. A session history system lets you track generated passwords, and the theme-adaptive UI supports custom character filtering.","tags":["Crypto API","Entropy Engine","Session History","Theme Adaptive UI"],"live":"https://yashpatil3495.github.io/Fortress-Pro/","github":"https://github.com/yashpatil3495/Fortress-Pro.git"}'>
+      <div class="card-img-placeholder" style="background: linear-gradient(135deg,#110804,#1e0d06);">
+        <canvas class="card-placeholder-canvas" id="card-canvas-3"></canvas>
+        <span class="card-emoji">🔐</span>
+      </div>
+      <div class="card-body">
+        <div class="card-number">03 / SECURITY</div>
+        <h3 class="card-title">Fortress Pro</h3>
+        <p class="card-desc">A cryptographically secure password generator featuring real-time entropy estimation, session history, and a modern theme-adaptive UI with custom character filtering.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Crypto API</span>
+          <span class="tech-tag">Entropy Engine</span>
+          <span class="tech-tag">Session History</span>
+          <span class="tech-tag">Theme Adaptive</span>
+        </div>
+        <div class="card-links">
+          <button class="card-link primary magnetic" onclick="openModal(this.closest('.project-card'))" style="border:none;cursor:none;">Expand ↗</button>
+          <a href="https://yashpatil3495.github.io/Fortress-Pro/" target="_blank" rel="noopener noreferrer" class="card-link secondary magnetic" data-label="Open">Live Demo</a>
+          <a href="case-studies/case-study-fortress-pro.html" class="card-link secondary magnetic" data-label="Study" style="border-color:rgba(201,74,42,0.2);color:var(--muted);">Case Study →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal reveal-delay-3 spotlight-card" data-label="View" data-category="creative"
+         data-modal='{"emoji":"🖼","gradient":"linear-gradient(135deg,#060a0e,#0a1020)","category":"04 / Creative","title":"CipherPixel","problem":"Sharing secret messages online is either insecure or requires complex encryption apps. What if you could hide a message in plain sight?","solution":"CipherPixel uses pixel-level steganography via the Canvas API to encode hidden text inside image files. Drag-and-drop an image, type your message, encode it — then decode it later. The message is invisible to the naked eye but perfectly extractable.","tags":["Canvas API","Steganography","Drag & Drop","File API"],"live":"https://yashpatil3495.github.io/CipherPixel/","github":"https://github.com/yashpatil3495/CipherPixel.git"}'>
+      <div class="card-img-placeholder" style="background: linear-gradient(135deg,#060a0e,#0a1020);">
+        <canvas class="card-placeholder-canvas" id="card-canvas-4"></canvas>
+        <span class="card-emoji">🖼</span>
+      </div>
+      <div class="card-body">
+        <div class="card-number">04 / CREATIVE</div>
+        <h3 class="card-title">CipherPixel</h3>
+        <p class="card-desc">A steganography tool that hides secret messages inside images using pixel-level encoding. Supports drag-and-drop upload, encode/decode modes, and pixel-perfect extraction.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Canvas API</span>
+          <span class="tech-tag">Steganography</span>
+          <span class="tech-tag">Drag & Drop</span>
+          <span class="tech-tag">File API</span>
+        </div>
+        <div class="card-links">
+          <button class="card-link primary magnetic" onclick="openModal(this.closest('.project-card'))" style="border:none;cursor:none;">Expand ↗</button>
+          <a href="https://yashpatil3495.github.io/CipherPixel/" target="_blank" rel="noopener noreferrer" class="card-link secondary magnetic" data-label="Open">Live Demo</a>
+          <a href="case-studies/case-study-cipherpixel.html" class="card-link secondary magnetic" data-label="Study" style="border-color:rgba(58,125,232,0.2);color:var(--muted);">Case Study →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="section-ask-row reveal">
+    <span class="section-ask-label">✦ Ask AI</span>
+    <button class="section-ask-chip" data-q="Tell me about Focus Flow project">Tell me about Focus Flow</button>
+    <button class="section-ask-chip" data-q="What tech stack does Yash use in his projects?">What tech stack does he use?</button>
+    <button class="section-ask-chip" data-q="Which of Yash's projects is most impressive?">Most impressive project?</button>
+    <button class="section-ask-chip" data-q="Does Yash have any AI-related projects?">Any AI projects?</button>
+  </div>
+</div>
+</section>
+<section id="about" class="section-outer">
+<div class="about section-box" style="max-width:1240px;margin:0 auto;">
+  <div class="section-label">About Me</div>
+  <h2 class="section-title split-title">Who <em>I Am</em></h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm <strong>Yash Patil</strong> — a frontend developer and UI/UX designer based in Pune, India. I craft digital experiences that are fast, beautiful, and purposeful.</p>
+      <p>Currently pursuing my <strong>Bachelor of Computer Engineering</strong> (2025–Present), I'm actively building real-world projects while staying sharp with modern web technologies and AI tools. I'm open to full-time roles, freelance work, and internships.</p>
+      <div class="stats-row reveal">
+        <div class="stat"><div class="stat-num">4+</div><div class="stat-label">Projects Shipped</div></div>
+        <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Technologies Used</div></div>
+        <div class="stat"><div class="stat-num">7+</div><div class="stat-label">Languages Known</div></div>
+      </div>
+      <div class="skills-block reveal">
+        <div class="skills-label">Technical Skills</div>
+        <div class="skill-pills">
+          <span class="skill-pill">HTML5</span>
+          <span class="skill-pill">CSS3</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">React</span>
+          <span class="skill-pill">Three.js</span>
+          <span class="skill-pill">Node.js</span>
+          <span class="skill-pill">C</span>
+          <span class="skill-pill">C++</span>
+          <span class="skill-pill">Java</span>
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">Figma</span>
+        </div>
+        <div class="skills-label">Soft Skills</div>
+        <div class="skill-pills">
+          <span class="soft-pill">Problem Solving</span>
+          <span class="soft-pill">Team Collaboration</span>
+          <span class="soft-pill">Communication</span>
+          <span class="soft-pill">Time Management</span>
+          <span class="soft-pill">Adaptability</span>
+          <span class="soft-pill">Creativity</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-visual reveal" style="display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:-60px;">
+      <div style="position:relative;width:300px;height:340px;border-radius:16px;overflow:hidden;border:1px solid rgba(232,168,50,0.25);box-shadow:0 0 60px rgba(232,168,50,0.1);">
+        <img
+          id="about-photo"
+          src="data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwBACdASoUAB4APzmEt1QvKCUjMBgMAeAnCWMAsswQ78WhXcjXMLdPIIAA/srv0AK5nkm4tnq9COZUxc427PxUYL+Fj5at0uIXGorOLxRydC7tuMimfy5RpvdfK5q6IjwPh0zJ8fAAAA=="
+          data-src="assets/yash-patil.webp"
+          data-srcset="assets/yash-patil.webp"
+          alt="Yash Patil"
+          width="600" height="900"
+          style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:blur(8px);transition:filter 0.5s ease;">
+        <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 60%,rgba(12,10,6,0.7));pointer-events:none;"></div>
+      </div>
+      <div class="about-canvas-label" style="font-family:var(--font-mono);font-size:0.72rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;">Frontend Developer · Pune, India</div>
+    </div>
+  </div>
+
+  <!-- LANGUAGES SPOKEN -->
+  <div class="lang-section reveal">
+    <div class="section-label" style="margin-top: 60px;">Languages Spoken</div>
+    <div class="lang-grid">
+      <div class="lang-card">
+        <div class="lang-header"><span class="lang-name">English</span><span class="lang-percent">90%</span></div>
+        <div class="progress-bar-bg"><div class="progress-fill" data-width="90"></div></div>
+      </div>
+      <div class="lang-card">
+        <div class="lang-header"><span class="lang-name">Hindi</span><span class="lang-percent">90%</span></div>
+        <div class="progress-bar-bg"><div class="progress-fill" data-width="90"></div></div>
+      </div>
+      <div class="lang-card">
+        <div class="lang-header"><span class="lang-name">Marathi</span><span class="lang-percent">90%</span></div>
+        <div class="progress-bar-bg"><div class="progress-fill" data-width="90"></div></div>
+      </div>
+      <div class="lang-card">
+        <div class="lang-header"><span class="lang-name">German</span><span class="lang-percent">50%</span></div>
+        <div class="progress-bar-bg"><div class="progress-fill" data-width="50" style="background: linear-gradient(90deg,#c4892a,#f8b500);"></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="section-ask-row reveal">
+    <span class="section-ask-label">✦ Ask AI</span>
+    <button class="section-ask-chip" data-q="Tell me about Yash's background and story">Yash's background</button>
+    <button class="section-ask-chip" data-q="What programming languages does Yash know?">Languages he knows</button>
+    <button class="section-ask-chip" data-q="What makes Yash a strong candidate?">Why hire Yash?</button>
+  </div>
+</div><!-- /.about section-box -->
+</section><!-- /.section-outer about -->
+
+<div class="divider"></div>
+
+<!-- EDUCATION -->
+<section id="education" class="section-outer">
+<div class="education section-box" style="max-width:1240px;margin:0 auto;">
+  <div class="section-label">Background</div>
+  <h2 class="section-title split-title">Education &amp;<br><em>Experience</em></h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2025 — Present</div>
+      <div class="timeline-heading">Bachelor of Computer Engineering</div>
+      <p class="timeline-desc">Focused on web development, programming fundamentals, and UI/UX design. Actively applying academic knowledge through real-world projects and initiatives.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2025 — Present</div>
+      <div class="timeline-heading">Frontend Developer — Self-Led Projects</div>
+      <p class="timeline-desc">Building responsive websites and interactive web applications using modern web technologies. Shipped multiple projects including productivity tools, language apps, and security utilities.</p>
+    </div>
+  </div>
+  <div class="section-ask-row reveal">
+    <span class="section-ask-label">✦ Ask AI</span>
+    <button class="section-ask-chip" data-q="What is Yash currently studying?">What is he studying?</button>
+    <button class="section-ask-chip" data-q="What experience does Yash have as a developer?">His experience</button>
+  </div>
+</div><!-- /.education section-box -->
+</section><!-- /.section-outer education -->
+
+<div class="divider"></div>
+
+<!-- SKILLS RADAR CHART -->
+<section class="section-outer">
+<div class="radar-section section-box" style="max-width:1240px;margin:0 auto;">
+  <div class="section-label">Skill Breakdown</div>
+  <h2 class="section-title split-title">Skill <em>Radar</em></h2>
+  <p class="section-sub">A visual breakdown of my proficiency across key development domains.</p>
+  <div class="currently-learning-badge" aria-label="Currently learning">
+    <span class="learning-pulse"></span>
+    <span class="learning-text">📚 Currently learning: <strong>DSA &amp; AI/ML</strong></span>
+  </div>
+  <div class="radar-wrap">
+    <canvas id="radar-canvas" width="480" height="480"></canvas>
+    <ul class="radar-labels-list">
+      <li class="radar-label-item">
+        <span class="radar-color-dot" style="background:#e8a832;box-shadow:0 0 8px #e8a832;"></span>
+        <div><div class="radar-label-name">Frontend</div><div class="radar-label-desc">HTML, CSS, JavaScript, responsive UI</div></div>
+      </li>
+      <li class="radar-label-item">
+        <span class="radar-color-dot" style="background:#2abfb3;box-shadow:0 0 8px #2abfb3;"></span>
+        <div><div class="radar-label-name">UI/UX Design</div><div class="radar-label-desc">Figma, layouts, user experience</div></div>
+      </li>
+      <li class="radar-label-item">
+        <span class="radar-color-dot" style="background:#c94a2a;box-shadow:0 0 8px #c94a2a;"></span>
+        <div><div class="radar-label-name">AI / ML</div><div class="radar-label-desc">Prompt engineering, LLMs, integrations</div></div>
+      </li>
+      <li class="radar-label-item">
+        <span class="radar-color-dot" style="background:#fad06e;box-shadow:0 0 8px #fad06e;"></span>
+        <div><div class="radar-label-name">Backend</div><div class="radar-label-desc">APIs, Node.js, server logic</div></div>
+      </li>
+      <li class="radar-label-item">
+        <span class="radar-color-dot" style="background:#9b7fe8;box-shadow:0 0 8px #9b7fe8;"></span>
+        <div><div class="radar-label-name">Systems / C</div><div class="radar-label-desc">C, C++, Java, data structures</div></div>
+      </li>
+      <li class="radar-label-item">
+        <span class="radar-color-dot" style="background:#e8a832;"></span>
+        <div><div class="radar-label-name">Creative Dev</div><div class="radar-label-desc">Three.js, Canvas API, WebGL animations</div></div>
+      </li>
+    </ul>
+  </div>
+</div><!-- /.radar-section section-box -->
+</section>
+<div class="divider"></div>
+
+<!-- SKILLS GRID -->
+<section class="section-outer skills-section">
+<div class="section-box" style="max-width:1240px;margin:0 auto;">
+  <div class="section-label">Proficiency</div>
+  <h2 class="section-title split-title">Skills &amp; <em>Stack</em></h2>
+  <p class="section-sub">A category-by-category breakdown of what I bring to a project — tools, languages, and design craft.</p>
+
+  <div class="skills-categories reveal">
+
+    <!-- Frontend -->
+    <div class="skills-category-card">
+      <div class="skills-cat-header">
+        <div class="skills-cat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/>
+          </svg>
+        </div>
+        <div>
+          <div class="skills-cat-name">Frontend</div>
+          <div class="skills-cat-count">6 skills</div>
+        </div>
+      </div>
+      <div class="skills-rows">
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">HTML5 &amp; CSS3</span><span class="skill-row-level">Expert</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="0.95"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">JavaScript (ES6+)</span><span class="skill-row-level">Advanced</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="0.88"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">React</span><span class="skill-row-level">Intermediate</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="0.72"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">Responsive Design</span><span class="skill-row-level">Expert</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="0.93"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">Three.js / WebGL</span><span class="skill-row-level">Intermediate</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="0.68"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">Canvas API &amp; SVG</span><span class="skill-row-level">Advanced</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="0.80"></div></div></div>
+      </div>
+    </div>
+
+    <!-- UI/UX Design -->
+    <div class="skills-category-card">
+      <div class="skills-cat-header">
+        <div class="skills-cat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+            <circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+          </svg>
+        </div>
+        <div>
+          <div class="skills-cat-name">UI / UX Design</div>
+          <div class="skills-cat-count">5 skills</div>
+        </div>
+      </div>
+      <div class="skills-rows">
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">Figma</span><span class="skill-row-level">Advanced</span></div><div class="skill-bar-bg"><div class="skill-bar-fill teal" data-width="0.82"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">Wireframing &amp; Prototyping</span><span class="skill-row-level">Advanced</span></div><div class="skill-bar-bg"><div class="skill-bar-fill teal" data-width="0.78"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">Typography &amp; Layout</span><span class="skill-row-level">Advanced</span></div><div class="skill-bar-bg"><div class="skill-bar-fill teal" data-width="0.85"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">Motion &amp; Micro-interactions</span><span class="skill-row-level">Intermediate</span></div><div class="skill-bar-bg"><div class="skill-bar-fill teal" data-width="0.72"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">Accessibility (a11y)</span><span class="skill-row-level">Intermediate</span></div><div class="skill-bar-bg"><div class="skill-bar-fill teal" data-width="0.70"></div></div></div>
+      </div>
+    </div>
+
+    <!-- AI & Integration -->
+    <div class="skills-category-card">
+      <div class="skills-cat-header">
+        <div class="skills-cat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+            <path d="M12 2a9 9 0 0 1 9 9c0 3.6-2.1 6.7-5.1 8.2L15 21H9l-.9-1.8A9.9 9.9 0 0 1 3 11a9 9 0 0 1 9-9z"/>
+            <line x1="9" y1="15" x2="9" y2="9"/><line x1="15" y1="15" x2="15" y2="9"/><line x1="9" y1="12" x2="15" y2="12"/>
+          </svg>
+        </div>
+        <div>
+          <div class="skills-cat-name">AI &amp; Integration</div>
+          <div class="skills-cat-count">4 skills</div>
+        </div>
+      </div>
+      <div class="skills-rows">
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">Prompt Engineering</span><span class="skill-row-level">Advanced</span></div><div class="skill-bar-bg"><div class="skill-bar-fill purple" data-width="0.85"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">LLM / API Integration</span><span class="skill-row-level">Intermediate</span></div><div class="skill-bar-bg"><div class="skill-bar-fill purple" data-width="0.74"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">REST APIs</span><span class="skill-row-level">Advanced</span></div><div class="skill-bar-bg"><div class="skill-bar-fill purple" data-width="0.80"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">Python</span><span class="skill-row-level">Intermediate</span></div><div class="skill-bar-bg"><div class="skill-bar-fill purple" data-width="0.66"></div></div></div>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="skills-category-card">
+      <div class="skills-cat-header">
+        <div class="skills-cat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <div>
+          <div class="skills-cat-name">Languages</div>
+          <div class="skills-cat-count">5 languages</div>
+        </div>
+      </div>
+      <div class="skills-rows">
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">JavaScript</span><span class="skill-row-level">Advanced</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="0.88"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">C / C++</span><span class="skill-row-level">Intermediate</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="0.74"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">Java</span><span class="skill-row-level">Intermediate</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="0.68"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">Python</span><span class="skill-row-level">Intermediate</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="0.66"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">SQL</span><span class="skill-row-level">Beginner</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="0.48"></div></div></div>
+      </div>
+    </div>
+
+    <!-- Tools & Workflow -->
+    <div class="skills-category-card">
+      <div class="skills-cat-header">
+        <div class="skills-cat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="skills-cat-name">Tools &amp; Workflow</div>
+          <div class="skills-cat-count">5 tools</div>
+        </div>
+      </div>
+      <div class="skills-rows">
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">Git &amp; GitHub</span><span class="skill-row-level">Advanced</span></div><div class="skill-bar-bg"><div class="skill-bar-fill rust" data-width="0.82"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">VS Code</span><span class="skill-row-level">Expert</span></div><div class="skill-bar-bg"><div class="skill-bar-fill rust" data-width="0.94"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">GitHub Pages / Deploy</span><span class="skill-row-level">Advanced</span></div><div class="skill-bar-bg"><div class="skill-bar-fill rust" data-width="0.85"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">Chrome DevTools</span><span class="skill-row-level">Advanced</span></div><div class="skill-bar-bg"><div class="skill-bar-fill rust" data-width="0.80"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">Node.js / npm</span><span class="skill-row-level">Intermediate</span></div><div class="skill-bar-bg"><div class="skill-bar-fill rust" data-width="0.65"></div></div></div>
+      </div>
+    </div>
+
+    <!-- Currently Learning -->
+    <div class="skills-category-card" style="border-color:rgba(42,191,179,0.2);">
+      <div class="skills-cat-header">
+        <div class="skills-cat-icon" style="background:rgba(42,191,179,0.08);border-color:rgba(42,191,179,0.25);color:var(--teal);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="skills-cat-name" style="color:var(--teal);">Currently Learning</div>
+          <div class="skills-cat-count">actively studying</div>
+        </div>
+      </div>
+      <div class="skills-rows">
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">Data Structures &amp; Algorithms</span><span class="skill-row-level" style="color:var(--teal);">🔄 In progress</span></div><div class="skill-bar-bg"><div class="skill-bar-fill teal" data-width="0.40"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">Machine Learning (Python)</span><span class="skill-row-level" style="color:var(--teal);">🔄 In progress</span></div><div class="skill-bar-bg"><div class="skill-bar-fill teal" data-width="0.28"></div></div></div>
+        <div class="skill-row"><div class="skill-row-top"><span class="skill-row-name">TypeScript</span><span class="skill-row-level" style="color:var(--teal);">🔄 In progress</span></div><div class="skill-bar-bg"><div class="skill-bar-fill teal" data-width="0.35"></div></div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- GITHUB ACTIVITY -->
+<section class="section-outer">
+<div class="github-section section-box" style="max-width:1240px;margin:0 auto;">
+  <div class="section-label">Open Source</div>
+  <h2 class="section-title split-title">GitHub <em>Activity</em></h2>
+  <p class="section-sub">My real-time coding statistics and amber-styled contribution heatmap.</p>
+  <div class="github-inner">
+    <div class="gh-profile-row">
+      <div class="gh-user">
+        <img class="gh-avatar" src="https://github.com/yashpatil3495.png" alt="Yash Patil GitHub profile photo" loading="lazy" width="60" height="60">
+        <div>
+          <h3>Yash Patil</h3>
+          <a href="https://github.com/yashpatil3495" target="_blank" rel="noopener noreferrer">@yashpatil3495</a>
+        </div>
+      </div>
+      <div class="gh-stats">
+        <div><span class="gh-stat-num" id="gh-repos">...</span><span class="gh-stat-label">Repos</span></div>
+        <div><span class="gh-stat-num" id="gh-followers">...</span><span class="gh-stat-label">Followers</span></div>
+      </div>
+    </div>
+    <div class="gh-chart-wrap">
+      <p class="gh-chart-label">Contribution Heatmap — Last 52 Weeks · Live from GitHub</p>
+      <div class="gh-skeleton-wrap" id="gh-skeleton">
+        <div class="gh-skeleton-grid" id="gh-skeleton-grid"></div>
+        <span class="gh-skeleton-label">Fetching contributions from GitHub…</span>
+      </div>
+      <canvas id="gh-heatmap-canvas" width="728" height="112" style="display:none;"></canvas>
+      <div class="gh-heatmap-legend">
+        <span>Less</span>
+        <div class="gh-legend-boxes">
+          <div class="gh-legend-box" style="background:rgba(232,168,50,0.08);border:1px solid rgba(232,168,50,0.15);"></div>
+          <div class="gh-legend-box" style="background:rgba(232,168,50,0.25);"></div>
+          <div class="gh-legend-box" style="background:rgba(232,168,50,0.5);"></div>
+          <div class="gh-legend-box" style="background:rgba(232,168,50,0.75);"></div>
+          <div class="gh-legend-box" style="background:#e8a832;box-shadow:0 0 6px rgba(232,168,50,0.6);"></div>
+        </div>
+        <span>More</span>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:40px;">
+    <a href="https://github.com/yashpatil3495" target="_blank" rel="noopener noreferrer" class="btn-ghost magnetic" data-label="GitHub">View GitHub Profile &nbsp;⌨️</a>
+  </div>
+</div><!-- /.github-section section-box -->
+</section>
+
+<div class="divider"></div>
+
+<!-- CERTIFICATIONS -->
+<section class="section-outer">
+<div class="certs-section section-box" style="max-width:1240px;margin:0 auto;">
+  <div class="section-label">Achievements</div>
+  <h2 class="section-title split-title">Certifications &amp;<br><em>Milestones</em></h2>
+  <p class="section-sub">Recognitions and technical milestones earned along the way.</p>
+  <div class="cert-grid">
+    <div class="cert-card reveal spotlight-card">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+          <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+        </svg>
+      </div>
+      <h3>C Programming</h3>
+      <p>Advanced proficiency in pointers, memory management, and data structures — core systems-level skills.</p>
+    </div>
+    <div class="cert-card reveal reveal-delay-1 spotlight-card">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+          <path d="M12 2a9 9 0 0 1 9 9c0 3.6-2.1 6.7-5.1 8.2L15 21H9l-.9-1.8A9.9 9.9 0 0 1 3 11a9 9 0 0 1 9-9z"/><line x1="9" y1="15" x2="9" y2="9"/><line x1="15" y1="15" x2="15" y2="9"/><line x1="9" y1="12" x2="15" y2="12"/>
+        </svg>
+      </div>
+      <h3>Generative AI</h3>
+      <p>Deep understanding of LLMs, Prompt Engineering, and practical AI tool application in real-world projects.</p>
+    </div>
+    <div class="cert-card reveal reveal-delay-2 spotlight-card">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+          <circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/>
+        </svg>
+      </div>
+      <h3>Hackathon Participant</h3>
+      <p>Active participant in college-level coding competitions, tech fests, and collaborative build challenges.</p>
+    </div>
+    <div class="cert-card reveal spotlight-card">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+      </div>
+      <h3>Responsive Web Design</h3>
+      <p>freeCodeCamp certification covering modern CSS layouts, Flexbox, Grid, and mobile-first design principles.</p>
+      <a href="https://www.freecodecamp.org/certification/yashpatil3495/responsive-web-design" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:10px;font-family:var(--font-mono);font-size:0.65rem;color:var(--amber);text-decoration:none;letter-spacing:0.05em;">View Certificate ↗</a>
+    </div>
+    <div class="cert-card reveal reveal-delay-1 spotlight-card">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+          <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+        </svg>
+      </div>
+      <h3>JavaScript Algorithms &amp; DS</h3>
+      <p>freeCodeCamp certification in ES6+, functional programming, OOP, and algorithmic problem-solving.</p>
+      <a href="https://www.freecodecamp.org/certification/yashpatil3495/javascript-algorithms-and-data-structures" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:10px;font-family:var(--font-mono);font-size:0.65rem;color:var(--amber);text-decoration:none;letter-spacing:0.05em;">View Certificate ↗</a>
+    </div>
+    <div class="cert-card reveal reveal-delay-2 spotlight-card">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+          <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+          <line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>
+        </svg>
+      </div>
+      <h3>UI/UX Design Fundamentals</h3>
+      <p>Coursera-backed training in wireframing, prototyping, and user research — applied through Figma design projects.</p>
+      <a href="https://www.coursera.org" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:10px;font-family:var(--font-mono);font-size:0.65rem;color:var(--amber);text-decoration:none;letter-spacing:0.05em;">View Certificate ↗</a>
+    </div>
+  </div>
+  <div class="section-ask-row reveal">
+    <span class="section-ask-label">✦ Ask AI</span>
+    <button class="section-ask-chip" data-q="What certifications and achievements does Yash have?">Yash's certifications</button>
+    <button class="section-ask-chip" data-q="How strong is Yash's knowledge of Generative AI?">AI knowledge depth</button>
+    <button class="section-ask-chip" data-q="Has Yash participated in any hackathons?">Hackathon experience</button>
+  </div>
+</div><!-- /.certs-section section-box -->
+</section>
+
+<div class="divider"></div>
+
+<!-- TESTIMONIALS -->
+<section class="section-outer">
+<div class="section-box" style="max-width:1240px;margin:0 auto;">
+  <div class="section-label">Kind Words</div>
+  <h2 class="section-title split-title">What People <em>Say</em></h2>
+  <p class="section-sub">Feedback from collaborators, peers, and mentors.</p>
+  <div class="testimonials-grid reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:48px;">
+
+    <div class="testimonial-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(232,168,50,0.14);border-radius:14px;padding:28px 24px;position:relative;">
+      <div style="font-size:2.5rem;line-height:1;color:rgba(232,168,50,0.3);font-family:Georgia,serif;position:absolute;top:16px;left:20px;">&ldquo;</div>
+      <p style="font-family:var(--font-serif);font-size:1rem;line-height:1.75;color:var(--text);margin:20px 0 20px;padding-top:8px;">Yash has an incredible eye for detail. The UI work he delivered was polished, fast, and well beyond what I expected for the timeline.</p>
+      <div style="display:flex;align-items:center;gap:12px;border-top:1px solid rgba(255,255,255,0.07);padding-top:16px;">
+        <div style="width:36px;height:36px;border-radius:50%;background:rgba(232,168,50,0.15);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:0.7rem;color:var(--amber);">AK</div>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text);letter-spacing:0.05em;">Arjun K.</div>
+          <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--muted);">Project Collaborator</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(42,191,179,0.14);border-radius:14px;padding:28px 24px;position:relative;">
+      <div style="font-size:2.5rem;line-height:1;color:rgba(42,191,179,0.3);font-family:Georgia,serif;position:absolute;top:16px;left:20px;">&ldquo;</div>
+      <p style="font-family:var(--font-serif);font-size:1rem;line-height:1.75;color:var(--text);margin:20px 0 20px;padding-top:8px;">One of the most self-driven developers I've worked alongside. Yash picks up new tools fast and ships things that actually work — cleanly.</p>
+      <div style="display:flex;align-items:center;gap:12px;border-top:1px solid rgba(255,255,255,0.07);padding-top:16px;">
+        <div style="width:36px;height:36px;border-radius:50%;background:rgba(42,191,179,0.15);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:0.7rem;color:var(--teal);">SR</div>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text);letter-spacing:0.05em;">Sneha R.</div>
+          <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--muted);">Peer · Computer Engineering</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card" style="background:rgba(255,255,255,0.03);border:1px solid rgba(155,127,232,0.14);border-radius:14px;padding:28px 24px;position:relative;">
+      <div style="font-size:2.5rem;line-height:1;color:rgba(155,127,232,0.3);font-family:Georgia,serif;position:absolute;top:16px;left:20px;">&ldquo;</div>
+      <p style="font-family:var(--font-serif);font-size:1rem;line-height:1.75;color:var(--text);margin:20px 0 20px;padding-top:8px;">The attention he gives to typography and motion makes his work stand out immediately. It's rare to see someone this young think so carefully about user experience.</p>
+      <div style="display:flex;align-items:center;gap:12px;border-top:1px solid rgba(255,255,255,0.07);padding-top:16px;">
+        <div style="width:36px;height:36px;border-radius:50%;background:rgba(155,127,232,0.15);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:0.7rem;color:#9b7fe8;">PM</div>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text);letter-spacing:0.05em;">Prof. M.</div>
+          <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--muted);">Faculty Mentor</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- BLOG / WRITING -->
+<section class="section-outer" id="writing">
+<div class="section-box" style="max-width:1240px;margin:0 auto;">
+  <div class="section-label">Thoughts &amp; Writing</div>
+  <h2 class="section-title split-title">From the <em>Blog</em></h2>
+  <p class="section-sub">Technical write-ups, design explorations, and ideas I've found worth sharing.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px;margin-top:48px;">
+
+    <a href="https://dev.to/yashpatil3495" target="_blank" rel="noopener noreferrer" class="blog-card reveal spotlight-card" style="display:block;background:rgba(255,255,255,0.02);border:1px solid rgba(232,168,50,0.14);border-radius:14px;padding:28px 24px;text-decoration:none;transition:border-color 0.3s,transform 0.3s;" onmouseover="this.style.borderColor='rgba(232,168,50,0.4)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(232,168,50,0.14)';this.style.transform='translateY(0)'">
+      <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--amber);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px;">Three.js · WebGL</div>
+      <h3 style="font-family:var(--font-serif);font-size:1.15rem;color:var(--text);margin-bottom:10px;line-height:1.4;">Building an Interactive 3D Background with Three.js r128</h3>
+      <p style="font-family:var(--font-mono);font-size:0.78rem;color:var(--muted);line-height:1.7;margin-bottom:20px;">A walkthrough of the particle system and camera rig powering this portfolio — zero frameworks, pure WebGL.</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <span style="font-family:var(--font-mono);font-size:0.65rem;color:var(--muted);">dev.to</span>
+        <span style="font-family:var(--font-mono);font-size:0.72rem;color:var(--amber);">Read ↗</span>
+      </div>
+    </a>
+
+    <a href="https://dev.to/yashpatil3495" target="_blank" rel="noopener noreferrer" class="blog-card reveal reveal-delay-1 spotlight-card" style="display:block;background:rgba(255,255,255,0.02);border:1px solid rgba(42,191,179,0.14);border-radius:14px;padding:28px 24px;text-decoration:none;transition:border-color 0.3s,transform 0.3s;" onmouseover="this.style.borderColor='rgba(42,191,179,0.4)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(42,191,179,0.14)';this.style.transform='translateY(0)'">
+      <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--teal);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px;">CSS · Animation</div>
+      <h3 style="font-family:var(--font-serif);font-size:1.15rem;color:var(--text);margin-bottom:10px;line-height:1.4;">Magnetic Cursor Effects in Vanilla JavaScript</h3>
+      <p style="font-family:var(--font-mono);font-size:0.78rem;color:var(--muted);line-height:1.7;margin-bottom:20px;">How to create buttery-smooth magnetic hover effects with no libraries — just physics-flavoured math and requestAnimationFrame.</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <span style="font-family:var(--font-mono);font-size:0.65rem;color:var(--muted);">dev.to</span>
+        <span style="font-family:var(--font-mono);font-size:0.72rem;color:var(--teal);">Read ↗</span>
+      </div>
+    </a>
+
+    <a href="https://dev.to/yashpatil3495" target="_blank" rel="noopener noreferrer" class="blog-card reveal reveal-delay-2 spotlight-card" style="display:block;background:rgba(255,255,255,0.02);border:1px solid rgba(155,127,232,0.14);border-radius:14px;padding:28px 24px;text-decoration:none;transition:border-color 0.3s,transform 0.3s;" onmouseover="this.style.borderColor='rgba(155,127,232,0.4)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(155,127,232,0.14)';this.style.transform='translateY(0)'">
+      <div style="font-family:var(--font-mono);font-size:0.65rem;color:#9b7fe8;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px;">AI · Prompt Engineering</div>
+      <h3 style="font-family:var(--font-serif);font-size:1.15rem;color:var(--text);margin-bottom:10px;line-height:1.4;">Wiring an LLM Chat Widget into a Static Portfolio</h3>
+      <p style="font-family:var(--font-mono);font-size:0.78rem;color:var(--muted);line-height:1.7;margin-bottom:20px;">A practical guide to embedding a context-aware Claude assistant into a static HTML site — system prompts, streaming, and fallbacks.</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <span style="font-family:var(--font-mono);font-size:0.65rem;color:var(--muted);">dev.to</span>
+        <span style="font-family:var(--font-mono);font-size:0.72rem;color:#9b7fe8;">Read ↗</span>
+      </div>
+    </a>
+
+  </div>
+  <div style="text-align:center;margin-top:40px;">
+    <a href="https://dev.to/yashpatil3495" target="_blank" rel="noopener noreferrer" class="btn-ghost magnetic" data-label="All Posts" style="display:inline-flex;align-items:center;gap:8px;">All Posts on dev.to ↗</a>
+  </div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact" class="section-outer">
+<div class="contact section-box" style="max-width:1240px;margin:0 auto;text-align:center;">
+  <div class="section-label" style="justify-content:center;">Get In Touch</div>
+  <h2 class="section-title split-title">Let's<br><em>Connect</em></h2>
+  <p class="contact-sub">Have a project idea, job opportunity, or just want to say hi? I'd love to hear from you.</p>
+  <div class="contact-grid">
+    <a href="mailto:yashpatil3495@gmail.com" class="contact-card reveal spotlight-card" data-label="Email">
+      <div class="contact-icon">✉️</div>
+      <div class="contact-card-label">Email</div>
+      <div class="contact-card-value">yashpatil3495@gmail.com</div>
+    </a>
+    <a href="https://wa.me/917741010554" target="_blank" rel="noopener noreferrer" class="contact-card reveal reveal-delay-1 spotlight-card" data-label="Chat">
+      <div class="contact-icon">💬</div>
+      <div class="contact-card-label">WhatsApp</div>
+      <div class="contact-card-value">Chat With Me</div>
+    </a>
+    <a href="https://www.linkedin.com/in/yash-patil-b30b18363" target="_blank" rel="noopener noreferrer" class="contact-card reveal reveal-delay-2 spotlight-card" data-label="Connect">
+      <div class="contact-icon">🔗</div>
+      <div class="contact-card-label">LinkedIn</div>
+      <div class="contact-card-value">Yash Patil</div>
+    </a>
+    <a href="https://github.com/yashpatil3495" target="_blank" rel="noopener noreferrer" class="contact-card reveal reveal-delay-3 spotlight-card" data-label="Code">
+      <div class="contact-icon">⌨️</div>
+      <div class="contact-card-label">GitHub</div>
+      <div class="contact-card-value">yashpatil3495</div>
+    </a>
+  </div>
+
+  <!-- CONTACT FORM -->
+  <div class="contact-form-wrap reveal">
+    <div class="contact-form-title">Send a <span>Message</span></div>
+  <div id="contact-form-inner">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="cf-name">Name</label>
+          <input class="form-input" id="cf-name" type="text" placeholder="Yash Patil" autocomplete="name" aria-describedby="err-name" aria-required="true">
+          <span class="form-error" id="err-name" role="alert">⚠ Please enter your name.</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="cf-email">Email</label>
+          <input class="form-input" id="cf-email" type="email" placeholder="you@example.com" autocomplete="email" aria-describedby="err-email err-email-invalid" aria-required="true">
+          <span class="form-error" id="err-email" role="alert">⚠ Email is required.</span>
+          <span class="form-error" id="err-email-invalid" role="alert">⚠ Please enter a valid email address.</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="cf-subject">Subject</label>
+        <input class="form-input" id="cf-subject" type="text" placeholder="Project Collaboration / Internship / Hi!" autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="cf-message">Message</label>
+        <textarea class="form-textarea" id="cf-message" placeholder="Tell me about your project, idea, or opportunity…" aria-describedby="err-message" aria-required="true"></textarea>
+        <span class="form-error" id="err-message" role="alert">⚠ Please enter your message.</span>
+      </div>
+      <button class="form-submit" id="cf-submit" onclick="submitContactForm()" type="button">Send Message ✦</button>
+    </div>
+    <div class="form-success" id="form-success">
+      <div class="form-success-icon">✦</div>
+      <div class="form-success-text">Message sent! I'll get back to you soon.</div>
+    </div>
+  </div>
+
+  <!-- CV DOWNLOAD BUTTON -->
+  <div style="margin-top:48px;">
+    <button class="btn-cv magnetic" id="cv-download-btn" onclick="triggerCVDownload()" data-label="Download">
+      <span class="btn-cv-icon">↓</span>
+      <span class="btn-cv-text">Download CV</span>
+    </button>
+  </div>
+
+  <div class="section-ask-row reveal" style="justify-content:center; margin-top:40px;">
+    <span class="section-ask-label">✦ Ask AI</span>
+    <button class="section-ask-chip" data-q="What's the best way to contact Yash?">Best way to reach Yash</button>
+    <button class="section-ask-chip" data-q="Is Yash available for freelance or internship work right now?">Is he available?</button>
+    <button class="section-ask-chip" data-q="What kind of projects is Yash looking to work on?">What projects interest him?</button>
+  </div>
+</div><!-- /.contact section-box -->
+</section>
+
+<!-- PROJECT MODAL -->
+<div id="project-modal" role="dialog" aria-modal="true" aria-label="Project Details">
+  <div class="modal-backdrop" onclick="closeModal()"></div>
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close modal">✕</button>
+    <div class="modal-hero" id="modal-hero">
+      <div class="modal-hero-glow"></div>
+      <span id="modal-emoji" style="font-size:80px;position:relative;z-index:1;filter:drop-shadow(0 0 24px rgba(232,168,50,0.6));">⏱</span>
+    </div>
+    <div class="modal-body">
+      <div class="modal-category" id="modal-cat"></div>
+      <div class="modal-title" id="modal-title"></div>
+      <div class="modal-problem">
+        <div class="modal-problem-label">The Problem</div>
+        <div class="modal-problem-text" id="modal-problem"></div>
+      </div>
+      <div class="modal-solution">
+        <div class="modal-solution-label">The Solution</div>
+        <div class="modal-solution-text" id="modal-solution"></div>
+      </div>
+      <div class="modal-tags" id="modal-tags"></div>
+      <div class="modal-links" id="modal-links"></div>
+    </div>
+</div>
+</div>
+
+</main><!-- end #main-content -->
+
+<footer role="contentinfo">
+  <p>&copy; <span id="footer-year">2025</span> Yash Patil — Crafted with <span>Three.js</span> &amp; golden ambition</p>
+</footer>
+
+<button id="scroll-top" aria-label="Scroll to top">↑</button>
+
+<!-- ═══════════════════════════════════════════
+     AI CHAT ASSISTANT WIDGET
+════════════════════════════════════════════ -->
+<button id="ai-chat-btn" aria-label="Ask Yash's AI assistant">
+  <div class="ai-btn-pulse"></div>
+  <svg viewBox="0 0 24 24" fill="none" stroke="#0c0a06" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2C6.48 2 2 6.03 2 11c0 2.6 1.16 4.94 3 6.57V21l3.5-2.1A10.6 10.6 0 0012 20c5.52 0 10-4.03 10-9S17.52 2 12 2z"/>
+    <circle cx="8.5" cy="11" r="1.2" fill="#0c0a06"/><circle cx="12" cy="11" r="1.2" fill="#0c0a06"/><circle cx="15.5" cy="11" r="1.2" fill="#0c0a06"/>
+  </svg>
+</button>
+
+<div id="ai-chat-panel" role="dialog" aria-label="Chat with Yash's AI">
+
+  <!-- Header -->
+  <div class="chat-header">
+    <div class="chat-header-gem" id="chat-avatar-gem">✦</div>
+    <div class="chat-header-info">
+      <div class="chat-header-title">ASK YASH'S AI</div>
+      <div class="chat-header-sub"><span class="chat-status-dot"></span><span id="chat-status-text">Powered by Claude</span></div>
+    </div>
+    <div class="chat-header-actions">
+      <!-- Tone selector -->
+      <div class="chat-tone-wrap" title="Change tone">
+        <button class="chat-tone-btn active" data-tone="casual" title="Casual">😊</button>
+        <button class="chat-tone-btn" data-tone="formal" title="Formal">🎩</button>
+        <button class="chat-tone-btn" data-tone="roast" title="Roast Me">🔥</button>
+      </div>
+      <!-- Actions -->
+      <button class="chat-action-btn" id="chat-mic-btn" title="Voice input" aria-label="Voice input">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0014 0M12 19v3M8 22h8"/></svg>
+      </button>
+      <button class="chat-action-btn" id="chat-share-btn" title="Copy transcript" aria-label="Copy chat transcript">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"/></svg>
+      </button>
+      <button class="chat-close" id="chat-close-btn" aria-label="Close chat">✕</button>
+    </div>
+  </div>
+
+  <!-- Messages -->
+  <div id="chat-messages">
+    <!-- Conversation starters shown on first open -->
+    <div id="chat-starters">
+      <div class="starter-label">✦ What would you like to know?</div>
+      <div class="starter-grid">
+        <button class="starter-card" data-q="What projects has Yash built?">
+          <span class="starter-icon">🚀</span>
+          <span class="starter-title">Projects</span>
+          <span class="starter-sub">See what Yash has shipped</span>
+        </button>
+        <button class="starter-card" data-q="What are Yash's technical skills?">
+          <span class="starter-icon">⚡</span>
+          <span class="starter-title">Skills</span>
+          <span class="starter-sub">Tech stack & expertise</span>
+        </button>
+        <button class="starter-card" data-q="Is Yash available for internships or jobs?">
+          <span class="starter-icon">💼</span>
+          <span class="starter-title">Hire Yash</span>
+          <span class="starter-sub">Availability & opportunities</span>
+        </button>
+        <button class="starter-card" data-q="How can I contact Yash?">
+          <span class="starter-icon">📬</span>
+          <span class="starter-title">Contact</span>
+          <span class="starter-sub">Get in touch directly</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Follow-up chips (shown after replies) -->
+  <div class="chat-followups" id="chat-followups" style="display:none;"></div>
+
+  <!-- Input -->
+  <div class="chat-input-row">
+    <textarea id="chat-input" placeholder="Ask anything about Yash…" rows="1" autocomplete="off"></textarea>
+    <button id="chat-send" aria-label="Send message">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#0c0a06" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+      </svg>
+    </button>
+  </div>
+
+</div>
+
+<!-- Three.js loaded here (before inline scripts) so HTML/CSS renders first, unblocked -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/features.js" defer></script>
+
+<!-- SHARE BUTTON -->
+<button class="share-btn magnetic" id="share-btn" aria-label="Share this portfolio" data-label="Share" style="cursor:none;">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+  </svg>
+  Share
+</button>
+<div class="share-toast" id="share-toast">✓ Link copied to clipboard</div>
+
+<script>
+/* ── BLUR-UP IMAGE LOADER ── */
+(function() {
+  function loadBlurUp(img) {
+    if (!img.dataset.src) return;
+    const hi = new Image();
+    hi.onload = function() {
+      img.src = hi.src;
+      img.style.filter = 'blur(0px)';
+    };
+    hi.src = img.dataset.src;
+  }
+  const imgs = document.querySelectorAll('img[data-src]');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { loadBlurUp(e.target); io.unobserve(e.target); } });
+    }, { rootMargin: '200px' });
+    imgs.forEach(img => io.observe(img));
+  } else {
+    imgs.forEach(loadBlurUp);
+  }
+})();
+</script>
+
+</body>
+</html>
